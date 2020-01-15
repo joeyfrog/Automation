@@ -6,8 +6,8 @@ sudo apt-get update
 apt-cache policy docker-ce
 sudo apt-get install -y docker-ce
 sudo systemctl status docker
-sudo docker pull jenkins
-sudo docker run -d --name jenk1 -p 8080:8080 -p 50000:50000 jenkins
+sudo docker pull jenkins/jenkins
+sudo docker run -d --name jenk1 -p 8080:8080 -p 50000:50000 jenkins/jenkins
 sudo docker ps
 echo "#### Jenkins initial admin pass: ###"
 sleep 15
