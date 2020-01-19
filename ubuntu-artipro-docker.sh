@@ -5,7 +5,6 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 sudo apt-get update
 apt-cache policy docker-ce
 sudo apt-get install -y docker-ce
-sudo systemctl status docker
 sudo docker pull docker.bintray.io/jfrog/artifactory-pro:latest
 sudo docker run -d --name arti1 -p 8081:8081 docker.bintray.io/jfrog/artifactory-pro:latest
 sudo docker ps
