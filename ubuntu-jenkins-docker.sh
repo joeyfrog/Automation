@@ -5,7 +5,6 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 sudo apt-get update
 apt-cache policy docker-ce
 sudo apt-get install -y docker-ce
-sudo systemctl status docker
 sudo docker pull jenkins/jenkins
 sudo docker run -d --name jenk1 -p 8080:8080 -p 50000:50000 jenkins/jenkins
 sudo docker ps
