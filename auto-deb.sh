@@ -16,6 +16,7 @@ if which equivs-build >/dev/null; then
     equivs-build sourcefile > /dev/null 2>&1
   done
 printf "Script done.\n"
+rm sourcefile
 else
     echo "Please install equivs"
 fi
