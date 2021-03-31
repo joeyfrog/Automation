@@ -11,10 +11,17 @@ pool:
   name: 'Default'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- task: ArtifactoryGenericDownload@3
+  inputs:
+    connection: 'Joey SaaS'
+    specSource: 'taskConfiguration'
+    fileSpec: |
+      {
+        "files": [
+          {
+            "pattern": "docker-local/*",
+            "target": "dependencies"
+          }
+        ]
+      }
+    failNoOp: true
